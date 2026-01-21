@@ -9,7 +9,7 @@ let
     let
       qtbase = head (filter (d: getName d.name == "qtbase") dep.nativeBuildInputs);
       version = splitVersion qtbase.version;
-      majorMinor = concatStrings (take 2 version);
+      majorMinor = concatStrings (take 1 version);
     in
     pkgs."libsForQt${majorMinor}";
 
